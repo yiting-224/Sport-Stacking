@@ -1,0 +1,443 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <title>Test_2：Basic Test</title>
+    <link rel="stylesheet" href="./style.css" >
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href= "image/favicon4.ico" type="image/x-icon">
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<style>
+			body {background-color: #ffefd1;}
+			header{clear:both; text-align:center;background:#ffc107}
+			nav{float:left; width:20%;}
+			article{float:left; width:80%;}
+			aside{float:right; width:20%;}
+			footer{clear:both; text-align:center}
+		</style>
+   </head>
+  <body>
+		<div class="row">
+					<header>
+						<h2>Test_2：Basic Test</h2>
+					</header>		
+		<div class="col-12 col-sm-12 col-md-3">
+			<nav>
+				<div class="btn-group-vertical btn-group-lg" role="group"><br>
+					<button type="button" class="btn btn-info" onclick="window.location.href='index.html'">首頁</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='intro.html'">介紹</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='rule.html'">規則</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='test.html'">測驗</button>				
+					<button type="button" class="btn btn-danger" onclick="window.location.href='QA.html'">Q&A</button>
+				</div>
+			</nav>
+		</div>	
+		<div class="col-md-8"><br>
+		<div id="check" class="mt-9"></div>
+		<div id="feedback" class="mt-3"></div>
+		<h1><div id="timer">Time: 0s</div></h1>
+			<article>
+				<form id="quizForm"><br>
+				<h3>1. 一組疊杯有幾個杯子?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_1" id="answer1" value="6">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 6 個</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_1" id="answer2" value="9">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 9 個</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_1" id="answer3" value="12">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 12 個</h4>
+						</label>
+					</div><br>
+					<div id="feedback1" class="mt-3"></div>
+				<h3>2. 3-6-3/Cycle Relay 的交接線距離桌子邊緣多遠?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_2" id="answer1" value="1.53">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 1.53 m</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_2" id="answer2" value="2.13">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 2.13 m</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_2" id="answer3" value="3.35">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 3.35 m</h4>
+						</label>
+					</div>
+					<div id="feedback2" class="mt-3"></div><br>
+				<h3>3. 疊杯比賽需要帶什麼?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_3" id="answer1" value="passport">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 專用護照</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_3" id="answer2" value="timmer">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 計時器</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_3" id="answer3" value="mat">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 止滑桌墊</h4>
+						</label>
+					</div>
+					<div id="feedback3" class="mt-3"></div><br>
+				<h3>4. <u>不能</u>以下列哪個部位啟動/停止計時器?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_4" id="answer1" value="finger">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 手指</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_4" id="answer2" value="palms">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 手掌</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_4" id="answer3" value="wrist">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 手腕以下</h4>
+						</label>
+					</div>
+					<div id="feedback4" class="mt-3"></div><br>
+				<h3>5. 下列何者為SOC賽制特色?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_5" id="answer1" value="gender">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 不分性別</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_5" id="answer2" value="age">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 不分年齡</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_5" id="answer3" value="item">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 不分項目</h4>
+						</label>
+					</div>
+					<div id="feedback5" class="mt-3"></div><br>
+				<h3>6. 下列何者為接力賽的隊伍人數?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_6" id="answer1" value="4">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 4~5人</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_6" id="answer2" value="5">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 5~6人</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_6" id="answer3" value="any">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 不限人數</h4>
+						</label>
+					</div>
+					<div id="feedback6" class="mt-3"></div><br>
+				<h3>7. 下列何者為<u>世界競技疊杯聯會</u>的英文縮寫?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_7" id="answer1" value="WCSA">
+						<label class="form-check-label" for="answer1">
+							<h4>A. WCSA</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_7" id="answer2" value="WASS">
+						<label class="form-check-label" for="answer2">
+							<h4>B. WASS</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_7" id="answer3" value="WSSA">
+						<label class="form-check-label" for="answer3">
+							<h4>C. WSSA</h4>
+						</label>
+					</div>
+					<div id="feedback7" class="mt-3"></div><br>
+				<h3>8. 裁判舉<u>黃牌</u>代表什麼意思?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_8" id="answer1" value="fault">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 犯規</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_8" id="answer2" value="notsure">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 判別有爭議，待商榷</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_8" id="answer3" value="out">
+						<label class="form-check-label" for="answer3">
+							<h4>C. 違反運動家精神，將驅逐出場</h4>
+						</label>
+					</div>
+					<div id="feedback8" class="mt-3"></div><br>
+				<h3>9. 下列何者為Stack Out的比賽項目?</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_9" id="answer1" value="333">
+						<label class="form-check-label" for="answer1">
+							<h4>A. 3-3-3</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_9" id="answer2" value="363">
+						<label class="form-check-label" for="answer2">
+							<h4>B. 3-6-3</h4>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="answer_9" id="answer3" value="cycle">
+						<label class="form-check-label" for="answer3">
+							<h4>C. Cycle</h4>
+						</label>
+					</div>
+					<div id="feedback9" class="mt-3"></div><br>
+				<h3>10. 下列那些為疊杯比賽的項目(含對抗賽)?</h3>
+					<div class="form-group">
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option1" name="options[]" value="option1">
+						  <label class="form-check-label" for="option1"><h4>A. 3-3-3</h4></label>
+						  <span class="correct-answer"></span>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option2" name="options[]" value="option2">
+						  <label class="form-check-label" for="option2"><h4>B. 3-6-3</h4></label>
+						  <span class="correct-answer"></span>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option3" name="options[]" value="option3">
+						  <label class="form-check-label" for="option3"><h4>C. Cycle</h4></label>
+						  <span class="correct-answer"></span>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option4" name="options[]" value="option4">
+						  <label class="form-check-label" for="option4"><h4>D. 3-3-3 Double</h4></label>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option5" name="options[]" value="option5">
+						  <label class="form-check-label" for="option5"><h4>E. 3-6-3 Double</h4></label>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option6" name="options[]" value="option6">
+						  <label class="form-check-label" for="option6"><h4>F. Cycle Double</h4></label>
+						  <span class="correct-answer"></span>
+						</div>  
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option7" name="options[]" value="option7">
+						  <label class="form-check-label" for="option7"><h4>G. Cycle Double-親子組</h4></label>
+						  <span class="correct-answer"></span>
+						</div> 
+						  
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option8" name="options[]" value="option8">
+						  <label class="form-check-label" for="option8"><h4>H. 3-3-3 Relay</h4></label>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option9" name="options[]" value="option9">
+						  <label class="form-check-label" for="option9"><h4>I. 3-6-3 Relay</h4></label>
+						  <span class="correct-answer"></span>
+						</div>
+						
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" id="option10" name="options[]" value="option10">
+						  <label class="form-check-label" for="option10"><h4>J. Cycle Relay</h4></label>
+						  <span class="correct-answer"></span>
+						</div>  
+					</div>
+					<div id="feedback10" class="mt-3"></div><br>
+				</form> 		
+			</article>
+		</div>
+		<div class="col-12">
+			<footer>
+				<form id="submit">
+					<button type="button" class="btn btn-primary btn-lg" id='b0' onclick="checkAnswer()">Submit</button>
+					<button type="button" class="btn btn-success btn-lg" onclick="next();">Next</button>
+				</form>
+				<div class="progress">
+					<div class="progress-bar bg-warning" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</footer>		
+		</div>
+	</div>
+</body>
+<script>
+var startTime, endTime, score = 0;
+var timerElement = document.getElementById("timer");
+var seconds = 0;
+var timerInterval;
+
+
+function displayScore() {
+  var scoreElement = document.getElementById('feedback');
+  scoreElement.innerHTML = '<div class="alert alert-info" role="alert"><h3>Score: ' + score + ' points</h3></div>';
+  
+}
+
+function checkAnswer() {
+  // Get the selected answer
+  var selectedAnswer1 = document.querySelector('input[name="answer_1"]:checked');
+  var selectedAnswer2 = document.querySelector('input[name="answer_2"]:checked');
+  var selectedAnswer3 = document.querySelector('input[name="answer_3"]:checked');
+  var selectedAnswer4 = document.querySelector('input[name="answer_4"]:checked');
+  var selectedAnswer5 = document.querySelector('input[name="answer_5"]:checked');
+  var selectedAnswer6 = document.querySelector('input[name="answer_6"]:checked');
+  var selectedAnswer7 = document.querySelector('input[name="answer_7"]:checked');
+  var selectedAnswer8 = document.querySelector('input[name="answer_8"]:checked');
+  var selectedAnswer9 = document.querySelector('input[name="answer_9"]:checked');
+  var selectedAnswer10 = document.querySelectorAll('input[name="options[]"]:checked');
+  var checkfb = document.getElementById('check');
+  if (selectedAnswer1 && selectedAnswer2 && selectedAnswer3 && selectedAnswer4 && selectedAnswer5 && selectedAnswer6 && selectedAnswer7 && selectedAnswer8 && selectedAnswer9 && selectedAnswer10) {
+    // Check if the answer is correct
+	var btn=document.getElementById('b0');
+	btn.disabled=true;
+    var correctAnswer1 = "12"; // Change this to the correct answer
+	var correctAnswer2 = "2.13"; // Change this to the correct answer
+	var correctAnswer3 = "passport";
+	var correctAnswer4 = "wrist";
+	var correctAnswer5 = "age";
+	var correctAnswer6 = "4";
+	var correctAnswer7 = "WSSA";
+	var correctAnswer8 = "notsure";
+	var correctAnswer9 = "cycle";
+	var correctAnswer10 = ['option1', 'option2', 'option3','option6', 'option7', 'option9', 'option10'];
+    var feedbackElement1 = document.getElementById('feedback1');
+	var feedbackElement2 = document.getElementById('feedback2');
+	var feedbackElement3 = document.getElementById('feedback3');
+	var feedbackElement4 = document.getElementById('feedback4');
+	var feedbackElement5 = document.getElementById('feedback5');
+	var feedbackElement6 = document.getElementById('feedback6');
+	var feedbackElement7 = document.getElementById('feedback7');
+	var feedbackElement8 = document.getElementById('feedback8');
+	var feedbackElement9 = document.getElementById('feedback9');
+	var feedbackElement10 = document.getElementById('feedback10');
+    if (selectedAnswer1.value === correctAnswer1) {
+      feedbackElement1.innerHTML = '<div class="alert alert-success" role="alert">Correct! Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement1.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：C.</div>';
+    }
+	if (selectedAnswer2.value === correctAnswer2) {
+      feedbackElement2.innerHTML = '<div class="alert alert-success" role="alert">Correct! Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement2.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：B.</div>';
+    }
+	if (selectedAnswer3.value === correctAnswer3) {
+      feedbackElement3.innerHTML = '<div class="alert alert-success" role="alert">Correct! Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement3.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：A.</div>';
+    }
+	if (selectedAnswer4.value === correctAnswer4) {
+      feedbackElement4.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement4.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：C.</div>';
+    }
+	if (selectedAnswer5.value === correctAnswer5) {
+      feedbackElement5.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement5.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：B.</div>';
+    }
+	if (selectedAnswer6.value === correctAnswer6) {
+      feedbackElement6.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement6.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：A.</div>';
+    }
+	if (selectedAnswer7.value === correctAnswer7) {
+      feedbackElement7.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement7.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：C.</div>';
+    }
+	if (selectedAnswer8.value === correctAnswer8) {
+      feedbackElement8.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement8.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：B.</div>';
+    }
+	if (selectedAnswer9.value === correctAnswer9) {
+      feedbackElement9.innerHTML = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+      score += 10; // Increase the score for a correct answer
+    } else {
+      feedbackElement9.innerHTML = '<div class="alert alert-danger" role="alert">Incorrect. Ans：C.</div>';
+    }
+	var temp = '<div class="alert alert-success" role="alert">Correct！ Well done.</div>';
+	selectedAnswer10.forEach(function(answer) {
+        if (correctAnswer10.includes(answer.value)) {
+          score += 1;
+        }
+		else {
+			score -= 2;
+		   temp= '<div class="alert alert-danger" role="alert">Incorrect. Ans：A.B.C.F.G.I.J.</div>';
+		}
+		feedbackElement10.innerHTML=temp;
+      });
+	if (score==97) {
+          score += 3;
+        }
+	clearInterval(timerInterval);
+    displayScore();
+  } else {
+    // No answer selected
+    checkfb.innerHTML = '<h3><div class="alert alert-danger alert-dismissible fade show" role="alert">尚未作答完畢！<button type="button" class="btn-close" data-bs-dismiss="alert"></h3></button></div>';  
+  }
+}
+
+  // Function to update the timer
+  function updateTimer() {
+    seconds++;
+    timerElement.textContent = "Time: " + seconds + "s";
+  }
+
+  // Start the timer
+  timerInterval = setInterval(updateTimer, 1000);
+  
+function next(){
+	  localStorage.setItem('grade2', score);
+	  localStorage.setItem('time2', seconds);
+      window.location.href = 'test2.html';
+}
+</script>  
+  
+  
+  
+</html>

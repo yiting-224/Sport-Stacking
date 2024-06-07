@@ -1,0 +1,153 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <title>Test_1：Memory Game</title>
+    <link rel="stylesheet" href="./game/style.css" >
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href= "image/favicon4.ico" type="image/x-icon">
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<style>
+		body {background-color: #ffefd1;}
+		header{clear:both; text-align:center;background:#ffc107}
+		footer{clear:both; text-align:center}
+		nav{float:left; width:20%;}
+		article{ width:100%;
+			  width: 1000px;
+			  height: 500px;
+			  margin: auto;
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -ms-flex-wrap: wrap;
+			  flex-wrap: wrap;
+			  -webkit-perspective: 1000px;
+			  perspective: 1000px;
+			  margin-top: 0;}
+		aside{float:right; width:20%;}
+	</style>
+   </head>
+  <body>
+		<div class="row">
+					<header>
+						<h2>Test_1：Memory Game</h2>
+						<h4 id="score">翻牌次數：0</h4>
+						<h4 id="st">狀態：未完成</h4>
+					</header>		
+		<div class="col-12 col-sm-12 col-md-1">
+			<nav>
+				<div class="btn-group-vertical btn-group-lg" role="group"><br>
+					<button type="button" class="btn btn-info" onclick="window.location.href='index.html'">首頁</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='intro.html'">介紹</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='rule.html'">規則</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='test.html'">測驗</button>				
+					<button type="button" class="btn btn-danger" onclick="window.location.href='QA.html'">Q&A</button>
+				</div>
+			</nav>
+		</div>	
+			<div class="col-11">
+			<h1><div id="timer">Time: 0s</div></h1>
+				<article>
+						<div class="memory-card" data-framework="333">
+							<img class="front-face" src="image/game/333.jpg" alt="333" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						<div class="memory-card" data-framework="333">
+							<img class="front-face" src="image/game/3.jpg" alt="333" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						<div class="memory-card" data-framework="363">
+							<img class="front-face" src="image/game/363.jpg" alt="363" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						<div class="memory-card" data-framework="363">
+							<img class="front-face" src="image/game/6.jpg" alt="363" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						<div class="memory-card" data-framework="cycle">
+							<img class="front-face" src="image/game/cycle.jpg" alt="cycle" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="cycle">
+							<img class="front-face" src="image/game/c.jpg" alt="cycle" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="cup1">
+							<img class="front-face" src="image/game/cup1.jpg" alt="cup1" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="cup1">
+							<img class="front-face" src="image/game/1.jpg" alt="cup1" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="cup2">
+							<img class="front-face" src="image/game/cup2.jpg" alt="cup2" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="cup2">
+							<img class="front-face" src="image/game/2.jpg" alt="cup2" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="mat">
+							<img class="front-face" src="image/game/m.jpg" alt="mat" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+
+						<div class="memory-card" data-framework="mat">
+							<img class="front-face" src="image/game/mat.jpg" alt="mat" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="timmer">
+							<img class="front-face" src="image/game/timmer.jpg" alt="timmer" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="timmer">
+							<img class="front-face" src="image/game/t.jpg" alt="timmer" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="single">
+							<img class="front-face" src="image/game/s.jpg" alt="mat" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="single">
+							<img class="front-face" src="image/game/single.jpg" alt="single" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="pass">
+							<img class="front-face" src="image/game/p.jpg" alt="pass" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+						
+						<div class="memory-card" data-framework="pass">
+							<img class="front-face" src="image/game/pass.jpg" alt="pass" />
+							<img class="back-face" src="image/game/WSSA.jpg" alt="Memory Card" />
+						</div>
+				</article>
+			</div>
+			<div class="col-12">
+				<footer>
+					<form id="next">
+						<center><h1><button type="submit" class="btn btn-success">Next</button></h1></center>
+						<div class="progress">
+							<div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</form>	
+				</footer>		
+			</div>
+	</div>
+  </body>
+	<script src="./game/script.js"></script>
+</html>

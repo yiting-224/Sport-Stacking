@@ -1,0 +1,74 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <title>Test_3：Personal informationt</title>
+    <link rel="stylesheet" href="./style.css" >
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href= "image/favicon4.ico" type="image/x-icon">
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<style>
+			body {background-color: #ffefd1;}
+			header{clear:both; text-align:center;background:#ffc107}
+			nav{float:left; width:20%;}
+			article{float:left; width:80%;}
+			aside{float:right; width:20%;}
+			footer{clear:both; text-align:center}
+		</style>
+	</head>
+<body>
+		<div class="row">
+					<header>
+						<h2>Test_3：Personal informationt</h2>
+					</header>		
+		<div class="col-12 col-sm-12 col-md-3">
+			<nav>
+				<div class="btn-group-vertical btn-group-lg" role="group"><br>
+					<button type="button" class="btn btn-info" onclick="window.location.href='index.html'">首頁</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='intro.html'">介紹</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='rule.html'">規則</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='test.html'">測驗</button>				
+					<button type="button" class="btn btn-danger" onclick="window.location.href='QA.html'">Q&A</button>
+				</div>
+			</nav>
+		</div>	
+		<div class="col-md-8"><br>
+			<article>
+				<div class="mb-3">
+					<label for="formGroupExampleInput" class="form-label"><h2>姓名：</h2></label>
+					<input type="text" class="form-control" id="name" placeholder="Please input your name">
+				</div>
+				<div class="mb-3">
+					<label for="formGroupExampleInput2" class="form-label"><h2>學號：</h2></label>
+					<input type="text" class="form-control" id="ID" placeholder="Please input your ID">
+				</div>	
+			</article>
+		</div>
+		<div class="col-12">
+			<footer>
+				<button type="button" class="btn btn-success btn-lg" onclick="next();">Next</button>
+				<div><br></div>
+				<div class="progress">
+					<div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</footer>		
+		</div>
+	</div>
+</body>
+<script>
+
+
+function next(){
+	const name = document.getElementById('name').value;
+    localStorage.setItem('name', name);
+	const ID = document.getElementById("ID").value;
+    localStorage.setItem('id', ID);
+    window.location.href = 'feedback.html';
+}
+</script>  
+  
+  
+  
+</html>

@@ -1,0 +1,102 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <title>成績單</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href= "image/favicon4.ico" type="image/x-icon">
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+			body {background-color: #ffefd1;}
+			header{clear:both; text-align:center;background:#ffc107}
+			nav{float:left; width:20%;}
+			article{float:right; width:80%;text-align:left}
+			aside{float:right; width:100%;}
+			footer{clear:both; text-align:center}
+		</style>
+   </head>
+  <body>
+		<div class="row">
+					<header>
+						<h2>成績單</h2>
+					</header>		
+		<div class="col-md-3">
+			<nav>
+				<div class="btn-group-vertical btn-group-lg" role="group"><br>
+					<button type="button" class="btn btn-info" onclick="window.location.href='index.html'">首頁</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='intro.html'">介紹</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='rule.html'">規則</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='test.html'">測驗</button>				
+					<button type="button" class="btn btn-danger" onclick="window.location.href='QA.html'">Q&A</button>
+				</div>
+			</nav>
+		</div>	
+		<div class="col-md-8"><br>
+			<article>
+					<table>
+						<tr id="VIII"></tr><br>
+						<tr id="I"></tr>
+						<tr id="II"></tr>
+						<tr id="III"></tr>
+						<tr id="IV"></tr>
+						<tr id="V"></tr>
+						<tr id="VI"></tr>
+						<tr id="VII"></tr>
+					</table>			 
+			</article>
+		</div>
+		
+		<div class="col-12">
+			<footer>
+				<form id="submit">
+					<button type="button" class="btn btn-success btn-lg" onclick="next();">Finish</button>
+				</form><br>
+				<div class="progress"><br>
+					<div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</footer>		
+		</div>
+	</div>
+
+<script>
+
+	var name=localStorage.getItem("name");
+	var id=localStorage.getItem("id");
+	var status=localStorage.getItem("status");
+	var status=(status==9)?"完成":"未完成";
+	var time1=localStorage.getItem("time1");
+	var grade1=localStorage.getItem("grade1");
+	var grade2=localStorage.getItem("grade2");
+	var time2=localStorage.getItem("time2");
+	window.onload=function(){
+		var I=document.getElementById("I");
+		var II=document.getElementById("II");
+		var III=document.getElementById("III");
+		var IV=document.getElementById("IV");
+		var V=document.getElementById("V");
+		var VI=document.getElementById("VI");
+		var VII=document.getElementById("VII");
+		var VIII=document.getElementById("VIII");
+		I.innerHTML="<h2>姓名：" + name+"</h2><br>";
+		II.innerHTML="<h2>學號：" + id+"</h2><br>";
+		III.innerHTML="<h2>遊戲狀態：" + status+"</h2><br>";
+		IV.innerHTML="<h2>遊戲花費時間：" + time1 + "(s)</h2><br>";
+		V.innerHTML="<h2>翻牌次數：" + grade1 + "次</h2><br>";
+		VI.innerHTML="<h2>測驗成績：" + grade2 + "/100</h2><br>";
+		VII.innerHTML="<h2>測驗花費時間：" + time2 + "(s)</h2><br>";
+		if (grade2 >= 60) {
+		  VIII.innerHTML = '<div class="alert alert-success" role="alert"> Congratulations！ You pass the test.</div>';
+		} else {
+		  VIII.innerHTML = '<div class="alert alert-danger" role="alert">Sadly. You fall the test. Go back to learn again.</div>';
+		}
+		};
+
+function next(){
+		window.location.href = 'index.html';
+}
+</script> 
+</body>
+</html>
